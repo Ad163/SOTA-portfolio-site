@@ -1,0 +1,45 @@
+# ════════════════════════════════════════════════════════════════════
+#  WHITELIST .gitignore — confidential by default.
+#
+#  This repo's working folder contains CONFIDENTIAL planning documents
+#  (client names, NHS/banking/AML notes, CRM data). To make a leak
+#  impossible, we IGNORE EVERYTHING by default and then explicitly
+#  re-include only the files the public site needs.
+#
+#  If you add a new public asset, add a matching "!path" line below.
+# ════════════════════════════════════════════════════════════════════
+
+# 1) Ignore everything
+*
+
+# 2) Re-include the site itself
+!.gitignore
+!README.md
+!index.html
+!CNAME
+!.nojekyll
+
+# Stylesheets
+!css/
+!css/**
+
+# Scripts
+!js/
+!js/**
+
+# Public assets (images + the primary CV only)
+!assets/
+!assets/images/
+!assets/images/passport.png
+!assets/images/pasted-1782121081671-0.png
+!assets/cv/
+!assets/cv/Saviour_Henry__AI_Engineer.pdf
+
+# ── Everything else stays ignored, including: ──
+#   Crafting SOTA Portfolio Website.md   (confidential chat log)
+#   implementation_plan.md               (confidential framing notes)
+#   content/  docs/  design/             (internal working files)
+#   *.csv                                (private CRM data)
+#   assets/images/evidence.jpeg          (not used by the site)
+#   Saviour Henry (1)_2.pdf, *_4.pdf, *_Proxify.pdf  (extra/private PDFs)
+#   .vscode/  node_modules/  .DS_Store  Thumbs.db

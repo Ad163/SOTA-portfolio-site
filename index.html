@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saviour Henry — Senior AI Engineer</title>
+  <meta name="description" content="Saviour Henry — Senior AI Engineer building production-grade machine learning systems, LLM pipelines, and automation products that turn complex problems into measurable outcomes.">
+  <meta name="author" content="Saviour Henry">
+  <meta name="keywords" content="AI Engineer, Machine Learning, LLM, RLHF, RAG, Production ML, Python, PyTorch, Quantum ML, Federated Learning, Automation">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Saviour Henry — Senior AI Engineer">
+  <meta property="og:description" content="Production AI systems, not just prototypes. LLM, ML, and automation engineering with measurable impact.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/passport.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════ PRELOADER ═══════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">S<span>·</span>H<span class="preloader__bar" id="preloader-bar"></span></div>
+    <div class="preloader__count" id="preloader-count">0%</div>
+  </div>
+
+  <!-- ═══════════ CURSOR GLOW ═══════════ -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav__logo">S<span>·</span>H</a>
+    <div class="nav__links">
+      <a href="#about" class="nav__link">About</a>
+      <a href="#work" class="nav__link">Work</a>
+      <a href="#research" class="nav__link">Research</a>
+      <a href="#experience" class="nav__link">Experience</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </div>
+    <a href="assets/cv/Saviour_Henry__AI_Engineer.pdf" download class="nav__cta">
+      Download CV
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ═══════════ MOBILE MENU ═══════════ -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about"><span>01</span>About</a>
+    <a href="#work"><span>02</span>Work</a>
+    <a href="#research"><span>03</span>Research</a>
+    <a href="#experience"><span>04</span>Experience</a>
+    <a href="#contact"><span>05</span>Contact</a>
+    <a href="assets/cv/Saviour_Henry__AI_Engineer.pdf" download><span>06</span>Download CV</a>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero" id="top">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="wrap hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Available · Senior AI Engineer
+        </div>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>Production AI systems,</span></span>
+          <span class="line"><span>built to <span class="accent">last.</span></span></span>
+        </h1>
+        <p class="hero__sub">Senior AI Engineer with 5+ years across LLM training pipelines, ML research, automation engineering, and mentorship. I turn complex technical problems into reliable systems with clear business value — and I help other engineers do the same.</p>
+        <p class="hero__manifesto">Not just impressive demos — measurable, maintainable, useful in the real world.</p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">
+            Explore My Work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="assets/cv/Saviour_Henry__AI_Engineer.pdf" download class="btn btn--ghost">Download CV</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__num" data-count="7">0<span>+</span></div>
+            <div class="stat__label">Research Papers</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="20">0<span>+</span></div>
+            <div class="stat__label">Projects Shipped</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="15">0<span>+</span></div>
+            <div class="stat__label">Engineers Mentored</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="5">0<span>+</span></div>
+            <div class="stat__label">Years Building</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__portrait" id="portrait">
+        <img class="portrait--base" src="assets/images/passport.png" alt="Saviour Henry" loading="eager">
+        <img class="portrait--reveal" src="assets/images/passport.png" alt="" aria-hidden="true">
+        <div class="hero__portrait-tag">Saviour Henry · Lagos / Remote</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ TICKER ═══════════ -->
+  <section class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="ticker-track">
+      <span class="ticker__item">Python</span>
+      <span class="ticker__item">PyTorch</span>
+      <span class="ticker__item">R</span>
+      <span class="ticker__item">LLM Training</span>
+      <span class="ticker__item">RLHF</span>
+      <span class="ticker__item">RAG Systems</span>
+      <span class="ticker__item">vLLM</span>
+      <span class="ticker__item">Ollama</span>
+      <span class="ticker__item">llama.cpp</span>
+      <span class="ticker__item">LoRA / QLoRA</span>
+      <span class="ticker__item">Hermes Agent</span>
+      <span class="ticker__item">Quantum ML</span>
+      <span class="ticker__item">FastAPI</span>
+      <span class="ticker__item">Docker</span>
+      <span class="ticker__item">PostgreSQL</span>
+      <span class="ticker__item">SHAP</span>
+      <span class="ticker__item">n8n</span>
+      <span class="ticker__item">Federated Learning</span>
+      <span class="ticker__item">ClinicalBERT</span>
+    </div>
+  </section>
+
+  <!-- ═══════════ CAPABILITIES (Stack + What I Build) ═══════════ -->
+  <section class="section" id="capabilities">
+    <div class="wrap">
+      <div class="section-head" data-rv="blur">
+        <span class="eyebrow">What I Build</span>
+        <h2>Engineering across the full AI lifecycle.</h2>
+        <p>From data and model evaluation to deployment, automation, and the people who maintain it. Five ways I help teams ship.</p>
+      </div>
+
+      <div class="cap__grid">
+        <!-- Stack -->
+        <div class="stack" data-rv="left">
+          <div class="stack__group">
+            <h4>Languages</h4>
+            <div class="stack__tags">
+              <span class="tag">Python</span><span class="tag">R</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">C++</span><span class="tag">Apps Script</span>
+            </div>
+          </div>
+          <div class="stack__group">
+            <h4>AI / ML</h4>
+            <div class="stack__tags">
+              <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">LightGBM</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">LIME</span><span class="tag">PennyLane</span>
+            </div>
+          </div>
+          <div class="stack__group">
+            <h4>LLM / RAG</h4>
+            <div class="stack__tags">
+              <span class="tag">LangChain</span><span class="tag">LlamaIndex</span><span class="tag">ChromaDB</span><span class="tag">pgvector</span><span class="tag">FAISS</span><span class="tag">Hugging Face</span>
+            </div>
+          </div>
+          <div class="stack__group">
+            <h4>LLM Serving &amp; Inference</h4>
+            <div class="stack__tags">
+              <span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">llama.cpp</span><span class="tag">LM Studio</span><span class="tag">LocalAI</span><span class="tag">TGI</span>
+            </div>
+          </div>
+          <div class="stack__group">
+            <h4>Fine-Tuning &amp; Agents</h4>
+            <div class="stack__tags">
+              <span class="tag">LoRA / QLoRA</span><span class="tag">HF Transformers</span><span class="tag">PEFT</span><span class="tag">RLHF</span><span class="tag">Hermes Agent</span><span class="tag">MCP</span>
+            </div>
+          </div>
+          <div class="stack__group">
+            <h4>Infrastructure</h4>
+            <div class="stack__tags">
+              <span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">FastAPI</span><span class="tag">n8n</span>
+            </div>
+          </div>
+          <div class="stack__group">
+            <h4>Research</h4>
+            <div class="stack__tags">
+              <span class="tag">Jupyter</span><span class="tag">Colab</span><span class="tag">Minitab</span><span class="tag">Tableau</span><span class="tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="services">
+          <div class="service" data-rv="up">
+            <div class="service__num">01</div>
+            <div>
+              <h3>LLM Systems Engineering</h3>
+              <p>Fine-tuning workflows (LoRA/QLoRA, RLHF), retrieval pipelines, and production serving with vLLM, Ollama, and llama.cpp — plus self-correcting agent stacks like Hermes. Built for reliability, measurement, and useful output.</p>
+            </div>
+          </div>
+          <div class="service" data-rv="up">
+            <div class="service__num">02</div>
+            <div>
+              <h3>Machine Learning Product Delivery</h3>
+              <p>Taking ML systems from prototype to production with strong engineering practices, cloud infrastructure, and clear quality checks.</p>
+            </div>
+          </div>
+          <div class="service" data-rv="up">
+            <div class="service__num">03</div>
+            <div>
+              <h3>Automation Engineering</h3>
+              <p>Workflow automation that removes repetitive manual work across data, operations, research, and communications — at enterprise scale.</p>
+            </div>
+          </div>
+          <div class="service" data-rv="up">
+            <div class="service__num">04</div>
+            <div>
+              <h3>AI Research Translation</h3>
+              <p>Turning research ideas into working systems, then explaining the tradeoffs clearly to technical and non-technical stakeholders alike.</p>
+            </div>
+          </div>
+          <div class="service" data-rv="up">
+            <div class="service__num">05</div>
+            <div>
+              <h3>Technical Consulting & Mentorship</h3>
+              <p>Helping teams reason through architecture, evaluation, deployment, and product fit — and mentoring engineers toward their first production deployment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SELECTED WORK ═══════════ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head" data-rv="blur">
+        <span class="eyebrow">Selected Work</span>
+        <h2>Systems that survive real use.</h2>
+        <p>Eight projects across production ML, published research, and enterprise automation. Some clients are confidential — framed by capability, never identity.</p>
+      </div>
+
+      <div class="work__grid">
+
+        <!-- 1 · LegalRAG (hero, wide) -->
+        <article class="card card--wide" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--production">Production</span>
+            <div class="card__metric">29% → 96.7%</div>
+          </div>
+          <h3>LegalRAG</h3>
+          <p class="card__desc">A production-grade retrieval system for legal documents, built to minimise hallucinations and maximise citation-backed accuracy. I lifted it from 29% to 96.7% by rebuilding the evaluation methodology — not by chasing surface-level model swaps. Designed for domains where trust, traceability, and correctness are non-negotiable.</p>
+          <div class="card__tags">
+            <span class="card__tag">LangChain</span><span class="card__tag">pgvector</span><span class="card__tag">Ollama</span><span class="card__tag">FastAPI</span><span class="card__tag">RAGAS</span>
+          </div>
+        </article>
+
+        <!-- 2 · CDEPF (hero) -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--published">Published</span>
+            <div class="card__metric">94.4%</div>
+          </div>
+          <h3>CDEPF — Cross-Dataset Phishing Detection</h3>
+          <p class="card__desc">Published in Franklin Open (Elsevier). A Cross-Domain Ensemble Probability Fusion framework achieving 94.4% cross-dataset accuracy on heterogeneous data with zero feature overlap — a 64.3% relative gain over baseline.</p>
+          <div class="card__tags">
+            <span class="card__tag">PCA Fusion</span><span class="card__tag">Ensemble ML</span><span class="card__tag">NLP</span><span class="card__tag">Python</span>
+          </div>
+        </article>
+
+        <!-- 3 · Federated Learning for Healthcare Inventory (hero) -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--confidential">Confidential</span>
+            <div class="card__metric">91.4% R²</div>
+          </div>
+          <h3>Federated Learning for Healthcare Inventory</h3>
+          <p class="card__desc">Privacy-preserving federated learning across 15 distributed contractors — 91.4% R² accuracy with no raw data ever leaving its source. Demonstrates ML engineering under strict privacy and governance constraints, with significant cost-savings potential.</p>
+          <div class="card__tags">
+            <span class="card__tag">FedAvg</span><span class="card__tag">PyTorch</span><span class="card__tag">Privacy ML</span><span class="card__tag">Healthcare</span>
+          </div>
+        </article>
+
+        <!-- 4 · InsightFlow -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--production">Production</span>
+          </div>
+          <h3>InsightFlow</h3>
+          <p class="card__desc">ML-powered communication intelligence that digests emails and meeting transcripts, surfaces key themes via HDBSCAN clustering and embeddings, and turns them into structured weekly briefs — orchestrated with n8n.</p>
+          <div class="card__tags">
+            <span class="card__tag">HDBSCAN</span><span class="card__tag">Embeddings</span><span class="card__tag">n8n</span><span class="card__tag">RAG</span>
+          </div>
+        </article>
+
+        <!-- 5 · Clinical NLP -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--research">Research</span>
+            <div class="card__metric">49,810</div>
+          </div>
+          <h3>Clinical NLP for Diagnosis Classification</h3>
+          <p class="card__desc">NLP research benchmarking ClinicalBERT against TF-IDF across 49,810 patient records for diagnosis classification — examining where transformer models earn their cost in clinical text and where classical methods still hold.</p>
+          <div class="card__tags">
+            <span class="card__tag">ClinicalBERT</span><span class="card__tag">TF-IDF</span><span class="card__tag">NLP</span><span class="card__tag">PyTorch</span>
+          </div>
+        </article>
+
+        <!-- 6 · Quantum Kernel Phishing -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--review">Under Review</span>
+            <div class="card__metric">90.3%</div>
+          </div>
+          <h3>Quantum Kernel Phishing (QCDEPF)</h3>
+          <p class="card__desc">Quantum kernel methods for cross-dataset phishing detection, simulated on NVIDIA H100. 90.3% mean cross-dataset accuracy (AUC 0.967) where all classical transfer-learning baselines collapse to near-random. Under review at an Elsevier venue.</p>
+          <div class="card__tags">
+            <span class="card__tag">PennyLane</span><span class="card__tag">Quantum Kernels</span><span class="card__tag">NVIDIA H100</span><span class="card__tag">Python</span>
+          </div>
+        </article>
+
+        <!-- 7 · Enterprise Workflow Automation -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--confidential">Confidential</span>
+          </div>
+          <h3>Enterprise Workflow Automation</h3>
+          <p class="card__desc">An end-to-end travel and operations management system built on Google Apps Script, automating multi-stage approval workflows for an enterprise team. Shows automation engineering that removes manual overhead at organisational scale.</p>
+          <div class="card__tags">
+            <span class="card__tag">Apps Script</span><span class="card__tag">Automation</span><span class="card__tag">Workflow Design</span>
+          </div>
+        </article>
+
+        <!-- 8 · Enterprise Learning Platform (stealth) -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--stealth">Stealth</span>
+          </div>
+          <h3>Enterprise Learning Platform</h3>
+          <p class="card__desc">A full-stack SaaS learning-management platform with billing, onboarding, and payment integration — currently in stealth with customers waiting. Architected for multi-tenant scale; details under wraps until launch.</p>
+          <div class="card__tags">
+            <span class="card__tag">Full-Stack SaaS</span><span class="card__tag">Billing</span><span class="card__tag">Multi-Tenant</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section class="section" id="about">
+    <div class="wrap about__grid">
+      <div class="about__portrait" data-rv="left">
+        <img src="assets/images/pasted-1782121081671-0.png" alt="Saviour Henry, portrait" loading="lazy">
+      </div>
+      <div class="about__body" data-rv="up">
+        <span class="eyebrow">About</span>
+        <p style="margin-top:1.2rem;font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.3;color:var(--ink);max-width:24ch;">I do my best work where experimentation meets execution.</p>
+        <p>I am a <strong>Senior AI Engineer, machine learning researcher, and recognised mentor</strong> focused on building AI systems that work in the real world — and developing the people who build them. I enjoy the part of engineering that turns a promising prototype into something dependable: evaluation, deployment, monitoring, iteration, and maintenance.</p>
+        <p>At <strong>Turing</strong>, I work on LLM training pipelines, RLHF, and supervised fine-tuning — sharpening how I reason about model quality, data curation, and alignment. At <strong>Start Innovation Hub Nigeria</strong>, I build end-to-end ML pipelines, automate high-volume workflows, and mentor data professionals; that work earned a Staff of the Year award twice. At <strong>Visis Startup</strong>, I built backend ML infrastructure for an accessibility platform serving thousands of visually impaired users.</p>
+        <p>My research matters to me too. I've published in cross-dataset phishing detection through <strong>Franklin Open (Elsevier, 2026)</strong> and contribute to work on quantum kernels and explainable healthcare analytics. Research gives me a disciplined way to think about uncertainty, generalization, and honest measurement — the same standard I bring to production systems.</p>
+        <ul class="about__values">
+          <li>Precision over noise</li>
+          <li>Measurable outcomes over vague claims</li>
+          <li>Durable systems over fragile demos</li>
+          <li>Clear communication across teams</li>
+          <li>Research rigor when it's warranted</li>
+          <li>Investing in people, not only code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCE ═══════════ -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head" data-rv="blur">
+        <span class="eyebrow">Experience</span>
+        <h2>Where I've shipped.</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="exp" data-rv="up">
+          <div class="exp__meta">
+            <span class="exp__role">AI / ML Engineer</span>
+            <span class="exp__years">Present</span>
+          </div>
+          <div>
+            <h3>Turing</h3>
+            <ul class="exp__bullets">
+              <li>Build and optimise Python-based LLM training and evaluation pipelines, with a focus on model quality, alignment, and repeatable measurement.</li>
+              <li>Design evaluation frameworks and curate supervised fine-tuning data; support RLHF workflows.</li>
+              <li>Move teams from manual spot checks to rigorous evaluation systems that surface failure modes before they reach users.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp" data-rv="up">
+          <div class="exp__meta">
+            <span class="exp__role">ML Researcher & Trainer</span>
+            <span class="exp__years">Recent</span>
+          </div>
+          <div>
+            <h3>Start Innovation Hub Nigeria</h3>
+            <ul class="exp__bullets">
+              <li>Architected ML pipelines processing documents and images at scale; reduced deployment cycles through CI/CD automation.</li>
+              <li>Mentored 15+ data professionals on LLM workflows, RAG pipeline design, and production deployment — accelerating delivery speed by ~50%.</li>
+              <li>Recognised as Staff of the Year twice for measurable contributions to engineering output and organisational performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp" data-rv="up">
+          <div class="exp__meta">
+            <span class="exp__role">ML Engineer</span>
+            <span class="exp__years">Prior</span>
+          </div>
+          <div>
+            <h3>Visis Startup</h3>
+            <ul class="exp__bullets">
+              <li>Built backend ML infrastructure for an accessibility platform serving thousands of visually impaired users.</li>
+              <li>Integrated OCR, text-to-speech, cloud services, and automation to improve response times and user satisfaction.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp" data-rv="up">
+          <div class="exp__meta">
+            <span class="exp__role">ML / Analytics</span>
+            <span class="exp__years">Earlier</span>
+          </div>
+          <div>
+            <h3>Presprint Digital</h3>
+            <ul class="exp__bullets">
+              <li>Worked on predictive analytics, anomaly detection, deployment workflows, and MLOps practices.</li>
+              <li>Established an early foundation in production-minded ML delivery, not only research.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp" data-rv="up">
+          <div class="exp__meta">
+            <span class="exp__role">Freelance & Independent</span>
+            <span class="exp__years">Ongoing</span>
+          </div>
+          <div>
+            <h3>EnoExplore · SwarmBench · Independent</h3>
+            <ul class="exp__bullets">
+              <li>Co-founded EnoExplore, an AI-powered travel intelligence platform.</li>
+              <li>Contributed to SwarmBench, a multi-agent LLM evaluation framework with international collaborators.</li>
+              <li>Delivered automation workflows, agentic systems, evaluation pipelines, and research intelligence tooling across diverse clients.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ RESEARCH ═══════════ -->
+  <section class="section" id="research">
+    <div class="wrap">
+      <div class="section-head" data-rv="blur">
+        <span class="eyebrow">Research Portfolio</span>
+        <h2>Seven papers, measured honestly.</h2>
+        <p>One published in an Elsevier venue, several in active peer review. My research spans cybersecurity, public health ML, and biostatistical epidemiology.</p>
+      </div>
+
+      <div class="research__grid">
+
+        <article class="paper paper--feature" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">Franklin Open · Elsevier · 2026</span>
+            <span class="badge badge--published">Published</span>
+          </div>
+          <h3>Ensemble Transfer Learning for Cross-Dataset Phishing Detection (CDEPF)</h3>
+          <p>The Cross-Domain Ensemble Probability Fusion framework — PCA-based feature harmonisation and information-theoretic weighted fusion for 94.4% cross-dataset accuracy across heterogeneous datasets with zero feature overlap.</p>
+          <a class="paper__doi" href="https://doi.org/10.1016/j.fraope.2026.100579" target="_blank" rel="noopener">DOI: 10.1016/j.fraope.2026.100579 · Open Access ↗</a>
+        </article>
+
+        <article class="paper" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">Computers &amp; Security · Elsevier</span>
+            <span class="badge badge--review">Under Review</span>
+          </div>
+          <h3>Quantum Kernel Enhanced Cross-Domain Probability Fusion (QCDEPF)</h3>
+          <p>Systematic investigation of quantum kernel methods for cross-dataset phishing detection, simulated across 8 qubit configurations on NVIDIA H100.</p>
+        </article>
+
+        <article class="paper" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">Nexus · Elsevier</span>
+            <span class="badge badge--review">Under Review</span>
+          </div>
+          <h3>QCDEPF-Nexus: Hilbert Space Dimensionality &amp; Kernel Sparsity</h3>
+          <p>Deeper analysis of qubit scaling, kernel sparsity phenomena, and the practical design guideline 2<sup>q</sup> ≪ n for quantum kernel transfer learning.</p>
+        </article>
+
+        <article class="paper" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">JOHA · Belitung Raya</span>
+            <span class="badge badge--review">Revisions</span>
+          </div>
+          <h3>Fertility Period Knowledge Among Adolescent Girls in West Africa</h3>
+          <p>Multi-country ML study across Benin, Gambia, Ghana, and Nigeria — 16,852 adolescent girls. LightGBM, SMOTE, Boruta, and LIME on the most recent DHS data.</p>
+        </article>
+
+        <article class="paper" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">Springer · Transfer Desk</span>
+            <span class="badge badge--review">Resubmission</span>
+          </div>
+          <h3>Explainable ML for Maternal Health Service Utilisation in Nigeria</h3>
+          <p>Survey-weighted LightGBM on 5,998 facility-delivered women from the 2024 NDHS, with SHAP explainability and calibration analysis.</p>
+        </article>
+
+        <article class="paper" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">Target: JAMIA / npj Digital Medicine</span>
+            <span class="badge badge--research">In Prep</span>
+          </div>
+          <h3>Clinical NLP for Diagnosis Classification</h3>
+          <p>ClinicalBERT vs TF-IDF benchmarking across 49,810 patient records — examining where transformer models earn their cost in clinical text.</p>
+        </article>
+
+        <article class="paper" data-rv="up">
+          <div class="paper__top">
+            <span class="paper__venue">In Preparation · Advanced Draft</span>
+            <span class="badge badge--research">In Prep</span>
+          </div>
+          <h3>Copula Geoadditive &amp; GLMM Series — Anemia &amp; Malaria, Sub-Saharan Africa</h3>
+          <p>Bivariate copula regression with district-specific parameters and Markov random fields; GLMM modelling across Ghana, Gambia, Rwanda, and Uganda DHS/MIS data.</p>
+        </article>
+
+      </div>
+
+      <p class="research__regions">DHS data analysed across <span>Nigeria · Ghana · Gambia · Rwanda · Uganda · Benin</span></p>
+    </div>
+  </section>
+
+  <!-- ═══════════ RECOGNITION + TESTIMONIALS ═══════════ -->
+  <section class="section" id="recognition">
+    <div class="wrap">
+      <div class="section-head" data-rv="blur">
+        <span class="eyebrow">Recognition</span>
+        <h2>Selected, recognised, trusted.</h2>
+      </div>
+
+      <div class="awards__grid">
+        <div class="award" data-rv="up">
+          <div class="award__org">Start Innovation Hub</div>
+          <h4>Staff of the Year ×2</h4>
+          <p>Awarded twice for measurable engineering and organisational impact.</p>
+        </div>
+        <div class="award" data-rv="up">
+          <div class="award__org">DSN · WESOnline · 3MTT</div>
+          <h4>Certified Mentor — 3MTT Cohort 2</h4>
+          <p>Generative AI Track. Recognised by Dr. Olubayo Adekanmbi and Dr. Roti Balogun.</p>
+        </div>
+        <div class="award" data-rv="up">
+          <div class="award__org">DSN · Google.org · 3MTT</div>
+          <h4>DeepTech Ready — Spotlight Mentor</h4>
+          <p>Cohort 2, 2025 — recognised for impactful mentorship delivery.</p>
+        </div>
+        <div class="award" data-rv="up">
+          <div class="award__org">African Impact Challenge</div>
+          <h4>AIC Cohort 6 — Builder Track</h4>
+          <p>Selected from 12,101+ completed applications.</p>
+        </div>
+        <div class="award" data-rv="up">
+          <div class="award__org">Mastercard Foundation · UNDP</div>
+          <h4>Young Africa Innovates — Top 30</h4>
+          <p>Top 30 Finalist out of 9,000+ applicants (0.3% selection rate), 2024.</p>
+        </div>
+        <div class="award" data-rv="up">
+          <div class="award__org">Elsevier</div>
+          <h4>Published Author</h4>
+          <p>Peer-reviewed publication in Franklin Open, with further papers in review.</p>
+        </div>
+      </div>
+
+      <div class="quotes__grid">
+        <figure class="quote" data-rv="up">
+          <div class="quote__mark">“</div>
+          <p>Saviour guided fellows through their AI learning journeys and delivered impactful sessions in the Generative AI Track — strengthening their confidence for the next phase of their careers.</p>
+          <figcaption class="quote__by"><strong>3MTT Mentorship Programme</strong>Certificate of Recognition, Cohort 2 · 2026</figcaption>
+        </figure>
+        <figure class="quote" data-rv="up">
+          <div class="quote__mark">“</div>
+          <p>Recognised as a Spotlight Mentor for active engagement and the delivery of impactful sessions across the DeepTech Ready programme.</p>
+          <figcaption class="quote__by"><strong>DeepTech Ready · Data Science Nigeria</strong>Supported by Google.org &amp; 3MTT · 2025</figcaption>
+        </figure>
+        <figure class="quote" data-rv="up">
+          <div class="quote__mark">“</div>
+          <p>Selected from over 12,000 applicants into the Builder Track — recognition of the kind of production-minded engineering this portfolio is built on.</p>
+          <figcaption class="quote__by"><strong>African Impact Challenge</strong>Cohort 6 · Builder Track</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact__grid">
+      <div data-rv="up">
+        <span class="eyebrow">Contact</span>
+        <h2 style="margin-top:1.2rem;">Let's build something that matters.</h2>
+        <p class="contact__sub">Whether you need a senior AI engineer, a research collaborator, or someone who can take your ML prototype to production — I'd like to hear about it.</p>
+        <div class="contact__links">
+          <a class="contact__link" href="https://www.linkedin.com/in/saviour-henry-b35a7a166" target="_blank" rel="noopener">LinkedIn <span>in/saviour-henry ↗</span></a>
+          <a class="contact__link" href="https://github.com/Ad163" target="_blank" rel="noopener">GitHub <span>github.com/Ad163 ↗</span></a>
+          <a class="contact__link" href="mailto:johnsavilesh@gmail.com">Email <span>johnsavilesh@gmail.com ↗</span></a>
+        </div>
+      </div>
+
+      <form class="form" id="contact-form" data-rv="up">
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        </div>
+        <div class="field">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="field">
+          <label for="message">Tell me about your project</label>
+          <textarea id="message" name="message" placeholder="What are you building, and where could I help?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">
+          Start a Conversation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span class="footer__copy">© 2026 Saviour Henry · Built with precision</span>
+      <div class="footer__social">
+        <a href="https://github.com/Ad163" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/saviour-henry-b35a7a166" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:johnsavilesh@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Motion libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
