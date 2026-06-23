@@ -29,6 +29,7 @@
 
 # Public assets (images + the primary CV only)
 !assets/
+!assets/favicon.svg
 !assets/images/
 !assets/images/passport.png
 !assets/images/pasted-1782121081671-0.png

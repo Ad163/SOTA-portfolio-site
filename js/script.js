@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   SAVIOUR HENRY — SOTA Portfolio · Motion layer
+   SAVIOUR HENRY - SOTA Portfolio · Motion layer
    Lenis smooth scroll + GSAP/ScrollTrigger cinematic reveals.
    Defensive by design: content ALWAYS becomes visible even if a CDN
    fails to load or a library throws. Honours prefers-reduced-motion.
@@ -14,15 +14,18 @@
   var lenis = null;
 
   /* ───────── Safety net: never leave content hidden ─────────
-     If anything below throws, or a CDN is blocked, this guarantees
-     every [data-rv] element is shown. */
+     If the animation engine is missing or a script throws, show everything.
+     IMPORTANT: this must NOT run when ScrollTrigger is healthy, or it would
+     reveal every section up-front and kill the scroll animations. */
   function revealAll() {
     var els = document.querySelectorAll("[data-rv]");
     for (var i = 0; i < els.length; i++) els[i].classList.add("rv-in");
   }
-  // Absolute backstop — runs no matter what happens elsewhere.
-  window.addEventListener("load", function () { setTimeout(revealAll, 2000); });
-  window.addEventListener("error", revealAll);
+  window.addEventListener("load", function () {
+    if (reduce || !hasST) setTimeout(revealAll, 1200);
+  });
+  // Fail open only on a genuine script error.
+  window.addEventListener("error", function () { setTimeout(revealAll, 200); });
 
   /* ───────── Preloader ───────── */
   function finishLoad() {
@@ -54,21 +57,27 @@
     }, 2600);
   })();
 
-  /* ───────── Reveal system (registered immediately, isolated) ───────── */
+  /* ───────── Reveal system - batched, staggered, cinematic ─────────
+     ScrollTrigger.batch groups elements entering together (e.g. a row of
+     cards) and staggers them for a sequenced reveal. */
   function initReveals() {
     if (reduce || !hasST) { revealAll(); return; }
-    document.querySelectorAll("[data-rv]").forEach(function (el) {
-      window.ScrollTrigger.create({
-        trigger: el, start: "top 88%", once: true,
-        onEnter: function () { el.classList.add("rv-in"); },
-      });
+    var g = window.gsap;
+    window.ScrollTrigger.batch("[data-rv]", {
+      start: "top 86%",
+      onEnter: function (batch) {
+        g.to(batch, {
+          opacity: 1, y: 0, x: 0, scale: 1, filter: "blur(0px)",
+          duration: 1.0, ease: "power3.out", stagger: 0.12, overwrite: true,
+        });
+      },
     });
   }
 
   /* ───────── GSAP plugin registration ───────── */
   if (hasST) { try { window.gsap.registerPlugin(window.ScrollTrigger); } catch (e) {} }
 
-  /* ───────── Lenis smooth scroll (isolated — cannot break reveals) ───────── */
+  /* ───────── Lenis smooth scroll (isolated - cannot break reveals) ───────── */
   if (hasLenis && !reduce) {
     try {
       lenis = new window.Lenis({
@@ -237,6 +246,37 @@
         track.parentElement.addEventListener("mouseleave", function () { tween.timeScale(1); });
       } catch (e) {}
     }
+  }
+
+  /* ───────── Seamless hero video fade-loop (Motion 15) ─────────
+     Custom rAF crossfade at the loop boundary so there's no hard cut. */
+  var heroVideo = document.getElementById("hero-video");
+  if (heroVideo && !reduce && window.innerWidth > 768) {
+    var FADE_MS = 500, LEAD = 0.55, vraf = null, fadingOut = false;
+    heroVideo.style.opacity = "0";
+    var fadeTo = function (target) {
+      if (vraf) cancelAnimationFrame(vraf);
+      var start = parseFloat(heroVideo.style.opacity) || 0, t0 = null;
+      var step = function (ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min(1, (ts - t0) / FADE_MS);
+        heroVideo.style.opacity = (start + (target - start) * p).toFixed(3);
+        if (p < 1) vraf = requestAnimationFrame(step);
+      };
+      vraf = requestAnimationFrame(step);
+    };
+    var safePlay = function () { var pl = heroVideo.play(); if (pl && pl.catch) pl.catch(function () {}); };
+    heroVideo.addEventListener("loadeddata", function () { heroVideo.style.opacity = "0"; safePlay(); fadeTo(1); });
+    heroVideo.addEventListener("timeupdate", function () {
+      var left = heroVideo.duration - heroVideo.currentTime;
+      if (!fadingOut && heroVideo.duration && left <= LEAD && left > 0) { fadingOut = true; fadeTo(0); }
+    });
+    heroVideo.addEventListener("ended", function () {
+      heroVideo.style.opacity = "0";
+      setTimeout(function () { heroVideo.currentTime = 0; safePlay(); fadingOut = false; fadeTo(1); }, 100);
+    });
+    // If it's already loaded (cached), kick it off.
+    if (heroVideo.readyState >= 2) { safePlay(); fadeTo(1); }
   }
 
   /* ───────── Contact form → mailto bridge ───────── */

@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saviour Henry — Senior AI Engineer</title>
-  <meta name="description" content="Saviour Henry — Senior AI Engineer building production-grade machine learning systems, LLM pipelines, and automation products that turn complex problems into measurable outcomes.">
+  <title>Saviour Henry, Senior AI Engineer</title>
+  <meta name="description" content="Saviour Henry, Senior AI Engineer building production-grade machine learning systems, LLM pipelines, and automation products that turn complex problems into measurable outcomes.">
   <meta name="author" content="Saviour Henry">
   <meta name="keywords" content="AI Engineer, Machine Learning, LLM, RLHF, RAG, Production ML, Python, PyTorch, Quantum ML, Federated Learning, Automation">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Saviour Henry — Senior AI Engineer">
+  <meta property="og:title" content="Saviour Henry, Senior AI Engineer">
   <meta property="og:description" content="Production AI systems, not just prototypes. LLM, ML, and automation engineering with measurable impact.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/passport.png">
@@ -22,6 +26,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ═══════════ AMBIENT LAYERS ═══════════ -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__blob aurora__blob--1"></span>
+    <span class="aurora__blob aurora__blob--2"></span>
+    <span class="aurora__blob aurora__blob--3"></span>
+    <span class="aurora__blob aurora__blob--4"></span>
+    <span class="aurora__blob aurora__blob--5"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- ═══════════ PRELOADER ═══════════ -->
   <div class="preloader" id="preloader" aria-hidden="true">
@@ -60,7 +74,11 @@
   </div>
 
   <!-- ═══════════ HERO ═══════════ -->
-  <header class="hero" id="top">
+  <header class="hero has-video" id="top">
+    <video class="hero__video" id="hero-video" autoplay muted playsinline preload="auto" aria-hidden="true">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_065045_c44942da-53c6-4804-b734-f9e07fc22e08.mp4" type="video/mp4">
+    </video>
+    <div class="hero__video-overlay"></div>
     <div class="hero__bg-grid"></div>
     <div class="hero__glow hero__glow--1"></div>
     <div class="hero__glow hero__glow--2"></div>
@@ -74,8 +92,8 @@
           <span class="line"><span>Production AI systems,</span></span>
           <span class="line"><span>built to <span class="accent">last.</span></span></span>
         </h1>
-        <p class="hero__sub">Senior AI Engineer with 5+ years across LLM training pipelines, ML research, automation engineering, and mentorship. I turn complex technical problems into reliable systems with clear business value — and I help other engineers do the same.</p>
-        <p class="hero__manifesto">Not just impressive demos — measurable, maintainable, useful in the real world.</p>
+        <p class="hero__sub">Senior AI Engineer with 5+ years across LLM training pipelines, ML research, automation engineering, and mentorship. I turn complex technical problems into reliable systems with clear business value, and I help other engineers do the same.</p>
+        <p class="hero__manifesto">Not just impressive demos, measurable, maintainable, useful in the real world.</p>
         <div class="hero__actions">
           <a href="#work" class="btn btn--primary">
             Explore My Work
@@ -141,7 +159,7 @@
     <div class="wrap">
       <div class="section-head" data-rv="blur">
         <span class="eyebrow">What I Build</span>
-        <h2>Engineering across the full AI lifecycle.</h2>
+        <h2>Engineering across the full <span class="text-grad">AI lifecycle</span>.</h2>
         <p>From data and model evaluation to deployment, automation, and the people who maintain it. Five ways I help teams ship.</p>
       </div>
 
@@ -198,7 +216,7 @@
             <div class="service__num">01</div>
             <div>
               <h3>LLM Systems Engineering</h3>
-              <p>Fine-tuning workflows (LoRA/QLoRA, RLHF), retrieval pipelines, and production serving with vLLM, Ollama, and llama.cpp — plus self-correcting agent stacks like Hermes. Built for reliability, measurement, and useful output.</p>
+              <p>Fine-tuning workflows (LoRA/QLoRA, RLHF), retrieval pipelines, and production serving with vLLM, Ollama, and llama.cpp, plus self-correcting agent stacks like Hermes. Built for reliability, measurement, and useful output.</p>
             </div>
           </div>
           <div class="service" data-rv="up">
@@ -212,7 +230,7 @@
             <div class="service__num">03</div>
             <div>
               <h3>Automation Engineering</h3>
-              <p>Workflow automation that removes repetitive manual work across data, operations, research, and communications — at enterprise scale.</p>
+              <p>Workflow automation that removes repetitive manual work across data, operations, research, and communications, at enterprise scale.</p>
             </div>
           </div>
           <div class="service" data-rv="up">
@@ -226,7 +244,7 @@
             <div class="service__num">05</div>
             <div>
               <h3>Technical Consulting & Mentorship</h3>
-              <p>Helping teams reason through architecture, evaluation, deployment, and product fit — and mentoring engineers toward their first production deployment.</p>
+              <p>Helping teams reason through architecture, evaluation, deployment, and product fit, and mentoring engineers toward their first production deployment.</p>
             </div>
           </div>
         </div>
@@ -240,7 +258,7 @@
       <div class="section-head" data-rv="blur">
         <span class="eyebrow">Selected Work</span>
         <h2>Systems that survive real use.</h2>
-        <p>Eight projects across production ML, published research, and enterprise automation. Some clients are confidential — framed by capability, never identity.</p>
+        <p>Production ML, published research, AI automation, and enterprise systems. Some clients are confidential, framed by capability, never identity.</p>
       </div>
 
       <div class="work__grid">
@@ -252,7 +270,7 @@
             <div class="card__metric">29% → 96.7%</div>
           </div>
           <h3>LegalRAG</h3>
-          <p class="card__desc">A production-grade retrieval system for legal documents, built to minimise hallucinations and maximise citation-backed accuracy. I lifted it from 29% to 96.7% by rebuilding the evaluation methodology — not by chasing surface-level model swaps. Designed for domains where trust, traceability, and correctness are non-negotiable.</p>
+          <p class="card__desc">A production-grade retrieval system for legal documents, built to minimise hallucinations and maximise citation-backed accuracy. I lifted it from 29% to 96.7% by rebuilding the evaluation methodology, not by chasing surface-level model swaps. Designed for domains where trust, traceability, and correctness are non-negotiable.</p>
           <div class="card__tags">
             <span class="card__tag">LangChain</span><span class="card__tag">pgvector</span><span class="card__tag">Ollama</span><span class="card__tag">FastAPI</span><span class="card__tag">RAGAS</span>
           </div>
@@ -264,8 +282,8 @@
             <span class="badge badge--published">Published</span>
             <div class="card__metric">94.4%</div>
           </div>
-          <h3>CDEPF — Cross-Dataset Phishing Detection</h3>
-          <p class="card__desc">Published in Franklin Open (Elsevier). A Cross-Domain Ensemble Probability Fusion framework achieving 94.4% cross-dataset accuracy on heterogeneous data with zero feature overlap — a 64.3% relative gain over baseline.</p>
+          <h3>CDEPF: Cross-Dataset Phishing Detection</h3>
+          <p class="card__desc">Published in Franklin Open (Elsevier). A Cross-Domain Ensemble Probability Fusion framework achieving 94.4% cross-dataset accuracy on heterogeneous data with zero feature overlap, a 64.3% relative gain over baseline.</p>
           <div class="card__tags">
             <span class="card__tag">PCA Fusion</span><span class="card__tag">Ensemble ML</span><span class="card__tag">NLP</span><span class="card__tag">Python</span>
           </div>
@@ -278,7 +296,7 @@
             <div class="card__metric">91.4% R²</div>
           </div>
           <h3>Federated Learning for Healthcare Inventory</h3>
-          <p class="card__desc">Privacy-preserving federated learning across 15 distributed contractors — 91.4% R² accuracy with no raw data ever leaving its source. Demonstrates ML engineering under strict privacy and governance constraints, with significant cost-savings potential.</p>
+          <p class="card__desc">Privacy-preserving federated learning across 15 distributed contractors, 91.4% R² accuracy with no raw data ever leaving its source. Demonstrates ML engineering under strict privacy and governance constraints, with significant cost-savings potential.</p>
           <div class="card__tags">
             <span class="card__tag">FedAvg</span><span class="card__tag">PyTorch</span><span class="card__tag">Privacy ML</span><span class="card__tag">Healthcare</span>
           </div>
@@ -290,9 +308,22 @@
             <span class="badge badge--production">Production</span>
           </div>
           <h3>InsightFlow</h3>
-          <p class="card__desc">ML-powered communication intelligence that digests emails and meeting transcripts, surfaces key themes via HDBSCAN clustering and embeddings, and turns them into structured weekly briefs — orchestrated with n8n.</p>
+          <p class="card__desc">ML-powered communication intelligence that digests emails and meeting transcripts, surfaces key themes via HDBSCAN clustering and embeddings, and turns them into structured weekly briefs, orchestrated with n8n.</p>
           <div class="card__tags">
             <span class="card__tag">HDBSCAN</span><span class="card__tag">Embeddings</span><span class="card__tag">n8n</span><span class="card__tag">RAG</span>
+          </div>
+        </article>
+
+        <!-- 4b · AI Automation & Workflow Engineering -->
+        <article class="card" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--production">Production</span>
+            <div class="card__metric">4,000+</div>
+          </div>
+          <h3>AI Automation &amp; Workflow Engineering</h3>
+          <p class="card__desc">AI-driven automations that remove manual work across email campaigns, research, and operations, built on n8n (drawing from a library of 4,000+ workflow patterns), Google Apps Script, and agentic LLM pipelines that self-route, enrich, and summarise data end to end.</p>
+          <div class="card__tags">
+            <span class="card__tag">n8n</span><span class="card__tag">Apps Script</span><span class="card__tag">Agentic AI</span><span class="card__tag">Email Automation</span><span class="card__tag">Webhooks</span>
           </div>
         </article>
 
@@ -303,7 +334,7 @@
             <div class="card__metric">49,810</div>
           </div>
           <h3>Clinical NLP for Diagnosis Classification</h3>
-          <p class="card__desc">NLP research benchmarking ClinicalBERT against TF-IDF across 49,810 patient records for diagnosis classification — examining where transformer models earn their cost in clinical text and where classical methods still hold.</p>
+          <p class="card__desc">NLP research benchmarking ClinicalBERT against TF-IDF across 49,810 patient records for diagnosis classification, examining where transformer models earn their cost in clinical text and where classical methods still hold.</p>
           <div class="card__tags">
             <span class="card__tag">ClinicalBERT</span><span class="card__tag">TF-IDF</span><span class="card__tag">NLP</span><span class="card__tag">PyTorch</span>
           </div>
@@ -340,7 +371,7 @@
             <span class="badge badge--stealth">Stealth</span>
           </div>
           <h3>Enterprise Learning Platform</h3>
-          <p class="card__desc">A full-stack SaaS learning-management platform with billing, onboarding, and payment integration — currently in stealth with customers waiting. Architected for multi-tenant scale; details under wraps until launch.</p>
+          <p class="card__desc">A full-stack SaaS learning-management platform with billing, onboarding, and payment integration, currently in stealth with customers waiting. Architected for multi-tenant scale; details under wraps until launch.</p>
           <div class="card__tags">
             <span class="card__tag">Full-Stack SaaS</span><span class="card__tag">Billing</span><span class="card__tag">Multi-Tenant</span>
           </div>
@@ -358,10 +389,10 @@
       </div>
       <div class="about__body" data-rv="up">
         <span class="eyebrow">About</span>
-        <p style="margin-top:1.2rem;font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.3;color:var(--ink);max-width:24ch;">I do my best work where experimentation meets execution.</p>
-        <p>I am a <strong>Senior AI Engineer, machine learning researcher, and recognised mentor</strong> focused on building AI systems that work in the real world — and developing the people who build them. I enjoy the part of engineering that turns a promising prototype into something dependable: evaluation, deployment, monitoring, iteration, and maintenance.</p>
-        <p>At <strong>Turing</strong>, I work on LLM training pipelines, RLHF, and supervised fine-tuning — sharpening how I reason about model quality, data curation, and alignment. At <strong>Start Innovation Hub Nigeria</strong>, I build end-to-end ML pipelines, automate high-volume workflows, and mentor data professionals; that work earned a Staff of the Year award twice. At <strong>Visis Startup</strong>, I built backend ML infrastructure for an accessibility platform serving thousands of visually impaired users.</p>
-        <p>My research matters to me too. I've published in cross-dataset phishing detection through <strong>Franklin Open (Elsevier, 2026)</strong> and contribute to work on quantum kernels and explainable healthcare analytics. Research gives me a disciplined way to think about uncertainty, generalization, and honest measurement — the same standard I bring to production systems.</p>
+        <p style="margin-top:1.2rem;font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem, 2.6vw, 1.9rem);line-height:1.3;color:var(--ink);max-width:24ch;">I do my best work where experimentation meets execution.</p>
+        <p>I am a <strong>Senior AI Engineer, machine learning researcher, and recognised mentor</strong> focused on building AI systems that work in the real world, and developing the people who build them. I enjoy the part of engineering that turns a promising prototype into something dependable: evaluation, deployment, monitoring, iteration, and maintenance.</p>
+        <p>At <strong>Turing</strong>, I work on LLM training pipelines, RLHF, and supervised fine-tuning, sharpening how I reason about model quality, data curation, and alignment. At <strong>Start Innovation Hub Nigeria</strong>, I build end-to-end ML pipelines, automate high-volume workflows, and mentor data professionals; that work earned a Staff of the Year award twice. At <strong>Visis Startup</strong>, I built backend ML infrastructure for an accessibility platform serving thousands of visually impaired users.</p>
+        <p>My research matters to me too. I've published in cross-dataset phishing detection through <strong>Franklin Open (Elsevier, 2026)</strong> and contribute to work on quantum kernels and explainable healthcare analytics. Research gives me a disciplined way to think about uncertainty, generalization, and honest measurement, the same standard I bring to production systems.</p>
         <ul class="about__values">
           <li>Precision over noise</li>
           <li>Measurable outcomes over vague claims</li>
@@ -407,7 +438,7 @@
             <h3>Start Innovation Hub Nigeria</h3>
             <ul class="exp__bullets">
               <li>Architected ML pipelines processing documents and images at scale; reduced deployment cycles through CI/CD automation.</li>
-              <li>Mentored 15+ data professionals on LLM workflows, RAG pipeline design, and production deployment — accelerating delivery speed by ~50%.</li>
+              <li>Mentored 15+ data professionals on LLM workflows, RAG pipeline design, and production deployment, accelerating delivery speed by ~50%.</li>
               <li>Recognised as Staff of the Year twice for measurable contributions to engineering output and organisational performance.</li>
             </ul>
           </div>
@@ -477,7 +508,7 @@
             <span class="badge badge--published">Published</span>
           </div>
           <h3>Ensemble Transfer Learning for Cross-Dataset Phishing Detection (CDEPF)</h3>
-          <p>The Cross-Domain Ensemble Probability Fusion framework — PCA-based feature harmonisation and information-theoretic weighted fusion for 94.4% cross-dataset accuracy across heterogeneous datasets with zero feature overlap.</p>
+          <p>The Cross-Domain Ensemble Probability Fusion framework, PCA-based feature harmonisation and information-theoretic weighted fusion for 94.4% cross-dataset accuracy across heterogeneous datasets with zero feature overlap.</p>
           <a class="paper__doi" href="https://doi.org/10.1016/j.fraope.2026.100579" target="_blank" rel="noopener">DOI: 10.1016/j.fraope.2026.100579 · Open Access ↗</a>
         </article>
 
@@ -505,7 +536,7 @@
             <span class="badge badge--review">Revisions</span>
           </div>
           <h3>Fertility Period Knowledge Among Adolescent Girls in West Africa</h3>
-          <p>Multi-country ML study across Benin, Gambia, Ghana, and Nigeria — 16,852 adolescent girls. LightGBM, SMOTE, Boruta, and LIME on the most recent DHS data.</p>
+          <p>Multi-country ML study across Benin, Gambia, Ghana, and Nigeria, 16,852 adolescent girls. LightGBM, SMOTE, Boruta, and LIME on the most recent DHS data.</p>
         </article>
 
         <article class="paper" data-rv="up">
@@ -523,7 +554,7 @@
             <span class="badge badge--research">In Prep</span>
           </div>
           <h3>Clinical NLP for Diagnosis Classification</h3>
-          <p>ClinicalBERT vs TF-IDF benchmarking across 49,810 patient records — examining where transformer models earn their cost in clinical text.</p>
+          <p>ClinicalBERT vs TF-IDF benchmarking across 49,810 patient records, examining where transformer models earn their cost in clinical text.</p>
         </article>
 
         <article class="paper" data-rv="up">
@@ -531,7 +562,7 @@
             <span class="paper__venue">In Preparation · Advanced Draft</span>
             <span class="badge badge--research">In Prep</span>
           </div>
-          <h3>Copula Geoadditive &amp; GLMM Series — Anemia &amp; Malaria, Sub-Saharan Africa</h3>
+          <h3>Copula Geoadditive &amp; GLMM Series: Anemia &amp; Malaria, Sub-Saharan Africa</h3>
           <p>Bivariate copula regression with district-specific parameters and Markov random fields; GLMM modelling across Ghana, Gambia, Rwanda, and Uganda DHS/MIS data.</p>
         </article>
 
@@ -557,22 +588,22 @@
         </div>
         <div class="award" data-rv="up">
           <div class="award__org">DSN · WESOnline · 3MTT</div>
-          <h4>Certified Mentor — 3MTT Cohort 2</h4>
+          <h4>Certified Mentor, 3MTT Cohort 2</h4>
           <p>Generative AI Track. Recognised by Dr. Olubayo Adekanmbi and Dr. Roti Balogun.</p>
         </div>
         <div class="award" data-rv="up">
           <div class="award__org">DSN · Google.org · 3MTT</div>
-          <h4>DeepTech Ready — Spotlight Mentor</h4>
-          <p>Cohort 2, 2025 — recognised for impactful mentorship delivery.</p>
+          <h4>DeepTech Ready, Spotlight Mentor</h4>
+          <p>Cohort 2, 2025, recognised for impactful mentorship delivery.</p>
         </div>
         <div class="award" data-rv="up">
           <div class="award__org">African Impact Challenge</div>
-          <h4>AIC Cohort 6 — Builder Track</h4>
+          <h4>AIC Cohort 6, Builder Track</h4>
           <p>Selected from 12,101+ completed applications.</p>
         </div>
         <div class="award" data-rv="up">
           <div class="award__org">Mastercard Foundation · UNDP</div>
-          <h4>Young Africa Innovates — Top 30</h4>
+          <h4>Young Africa Innovates, Top 30</h4>
           <p>Top 30 Finalist out of 9,000+ applicants (0.3% selection rate), 2024.</p>
         </div>
         <div class="award" data-rv="up">
@@ -585,7 +616,7 @@
       <div class="quotes__grid">
         <figure class="quote" data-rv="up">
           <div class="quote__mark">“</div>
-          <p>Saviour guided fellows through their AI learning journeys and delivered impactful sessions in the Generative AI Track — strengthening their confidence for the next phase of their careers.</p>
+          <p>Saviour guided fellows through their AI learning journeys and delivered impactful sessions in the Generative AI Track, strengthening their confidence for the next phase of their careers.</p>
           <figcaption class="quote__by"><strong>3MTT Mentorship Programme</strong>Certificate of Recognition, Cohort 2 · 2026</figcaption>
         </figure>
         <figure class="quote" data-rv="up">
@@ -595,7 +626,7 @@
         </figure>
         <figure class="quote" data-rv="up">
           <div class="quote__mark">“</div>
-          <p>Selected from over 12,000 applicants into the Builder Track — recognition of the kind of production-minded engineering this portfolio is built on.</p>
+          <p>Selected from over 12,000 applicants into the Builder Track, recognition of the kind of production-minded engineering this portfolio is built on.</p>
           <figcaption class="quote__by"><strong>African Impact Challenge</strong>Cohort 6 · Builder Track</figcaption>
         </figure>
       </div>
@@ -607,8 +638,8 @@
     <div class="wrap contact__grid">
       <div data-rv="up">
         <span class="eyebrow">Contact</span>
-        <h2 style="margin-top:1.2rem;">Let's build something that matters.</h2>
-        <p class="contact__sub">Whether you need a senior AI engineer, a research collaborator, or someone who can take your ML prototype to production — I'd like to hear about it.</p>
+        <h2 style="margin-top:1.2rem;">Let's build something that <span class="text-grad">matters</span>.</h2>
+        <p class="contact__sub">Whether you need a senior AI engineer, a research collaborator, or someone who can take your ML prototype to production, I'd like to hear about it.</p>
         <div class="contact__links">
           <a class="contact__link" href="https://www.linkedin.com/in/saviour-henry-b35a7a166" target="_blank" rel="noopener">LinkedIn <span>in/saviour-henry ↗</span></a>
           <a class="contact__link" href="https://github.com/Ad163" target="_blank" rel="noopener">GitHub <span>github.com/Ad163 ↗</span></a>

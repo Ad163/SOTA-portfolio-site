@@ -1,4 +1,4 @@
-# Saviour Henry — Portfolio
+# Saviour Henry - Portfolio
 
 State-of-the-art personal portfolio for **Saviour Henry**, Senior AI Engineer.
 Static site (HTML / CSS / vanilla JS) with cinematic motion via GSAP + Lenis,
@@ -9,7 +9,7 @@ deployed on GitHub Pages.
 ## Structure
 
 ```
-index.html              # markup — all sections
+index.html              # markup - all sections
 css/style.css           # design system (noir + terracotta) & responsive
 js/script.js            # motion layer (Lenis smooth scroll, GSAP reveals)
 assets/
@@ -25,7 +25,7 @@ python -m http.server 8000
 # then open http://localhost:8000
 ```
 
-(Any static server works — `npx serve` is an alternative. A server is
+(Any static server works - `npx serve` is an alternative. A server is
 preferred over opening `index.html` directly so the CV download and paths
 resolve cleanly.)
 
