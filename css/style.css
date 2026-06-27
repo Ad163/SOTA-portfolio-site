@@ -93,6 +93,8 @@ img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 ::selection { background: var(--accent); color: #fff; }
+/* Long words (e.g. "Production", "experimentation") never force horizontal scroll */
+h1, h2, h3, h4, p { overflow-wrap: break-word; }
 
 /* ───────────────────────── Layout helpers ───────────────────────── */
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--pad); }
@@ -805,26 +807,47 @@ body.menu-open .mobile-menu a:nth-child(6) { animation-delay: 0.38s; }
 
 /* ───────────────────────── Responsive ───────────────────────── */
 @media (max-width: 1024px) {
-  .hero__inner { grid-template-columns: 1fr; }
-  .hero__portrait { max-width: 360px; order: -1; }
+  .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  /* explicit width: the portrait's images are absolutely positioned, so without
+     a definite width aspect-ratio yields zero height and it collapses */
+  .hero__portrait { width: min(340px, 100%); order: -1; margin-inline: auto; }
   .cap__grid, .about__grid, .contact__grid { grid-template-columns: 1fr; }
-  .about__portrait { position: relative; top: 0; max-width: 360px; }
+  .about__portrait { position: relative; top: 0; max-width: 340px; margin-inline: auto; }
   .awards__grid, .quotes__grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
-  .nav__links { display: none; }
-  .nav__cta { display: none; }
+  .nav { padding: 0.5rem 0.5rem 0.5rem 1.1rem; }
+  .nav__links, .nav__cta { display: none; }
   .nav__burger { display: block; }
-  .hero__stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+
+  .hero { padding-block: 6.5rem 3rem; }
+  .hero__title { font-size: clamp(1.95rem, 8vw, 2.9rem); line-height: 1.08; }
+  .hero__portrait { width: min(250px, 72%); }
+  .hero__sub { font-size: 1rem; }
+  .hero__manifesto { font-size: 0.78rem; }
+  .hero__stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem 1rem; }
+
+  .section-head h2 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+
   .work__grid, .research__grid { grid-template-columns: 1fr; }
   .card--wide, .paper--feature { grid-column: span 1; }
+  .card { min-height: 0; }
   .exp { grid-template-columns: 1fr; gap: 0.8rem; }
   .about__values { grid-template-columns: 1fr; }
 }
+
 @media (max-width: 480px) {
+  :root { --section: clamp(3.5rem, 12vw, 5rem); }
   .awards__grid, .quotes__grid { grid-template-columns: 1fr; }
-  .hero__stats { gap: 1rem; }
-  .ticker::before, .ticker::after { width: 20vw; }
+  .hero__title { font-size: clamp(1.8rem, 9vw, 2.5rem); }
+  .hero__stats { gap: 1.1rem 0.8rem; }
+  .ticker::before, .ticker::after { width: 22vw; }
+
+  /* Stack CTAs full-width for easy thumb taps */
+  .hero__actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .form .btn--primary { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
