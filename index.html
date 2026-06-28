@@ -164,52 +164,6 @@
       </div>
 
       <div class="cap__grid">
-        <!-- Stack -->
-        <div class="stack" data-rv="left">
-          <div class="stack__group">
-            <h4>Languages</h4>
-            <div class="stack__tags">
-              <span class="tag">Python</span><span class="tag">R</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">C++</span><span class="tag">Apps Script</span>
-            </div>
-          </div>
-          <div class="stack__group">
-            <h4>AI / ML</h4>
-            <div class="stack__tags">
-              <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">LightGBM</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">LIME</span><span class="tag">PennyLane</span>
-            </div>
-          </div>
-          <div class="stack__group">
-            <h4>LLM / RAG</h4>
-            <div class="stack__tags">
-              <span class="tag">LangChain</span><span class="tag">LlamaIndex</span><span class="tag">ChromaDB</span><span class="tag">pgvector</span><span class="tag">FAISS</span><span class="tag">Hugging Face</span>
-            </div>
-          </div>
-          <div class="stack__group">
-            <h4>LLM Serving &amp; Inference</h4>
-            <div class="stack__tags">
-              <span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">llama.cpp</span><span class="tag">LM Studio</span><span class="tag">LocalAI</span><span class="tag">TGI</span>
-            </div>
-          </div>
-          <div class="stack__group">
-            <h4>Fine-Tuning &amp; Agents</h4>
-            <div class="stack__tags">
-              <span class="tag">LoRA / QLoRA</span><span class="tag">HF Transformers</span><span class="tag">PEFT</span><span class="tag">RLHF</span><span class="tag">Hermes Agent</span><span class="tag">MCP</span>
-            </div>
-          </div>
-          <div class="stack__group">
-            <h4>Infrastructure</h4>
-            <div class="stack__tags">
-              <span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">FastAPI</span><span class="tag">n8n</span>
-            </div>
-          </div>
-          <div class="stack__group">
-            <h4>Research</h4>
-            <div class="stack__tags">
-              <span class="tag">Jupyter</span><span class="tag">Colab</span><span class="tag">Minitab</span><span class="tag">Tableau</span><span class="tag">Streamlit</span>
-            </div>
-          </div>
-        </div>
-
         <!-- Services -->
         <div class="services">
           <div class="service" data-rv="up">
@@ -327,19 +281,6 @@
           </div>
         </article>
 
-        <!-- 5 · Clinical NLP -->
-        <article class="card" data-rv="up">
-          <div class="card__top">
-            <span class="badge badge--research">Research</span>
-            <div class="card__metric">49,810</div>
-          </div>
-          <h3>Clinical NLP for Diagnosis Classification</h3>
-          <p class="card__desc">NLP research benchmarking ClinicalBERT against TF-IDF across 49,810 patient records for diagnosis classification, examining where transformer models earn their cost in clinical text and where classical methods still hold.</p>
-          <div class="card__tags">
-            <span class="card__tag">ClinicalBERT</span><span class="card__tag">TF-IDF</span><span class="card__tag">NLP</span><span class="card__tag">PyTorch</span>
-          </div>
-        </article>
-
         <!-- 6 · Quantum Kernel Phishing -->
         <article class="card" data-rv="up">
           <div class="card__top">
@@ -353,8 +294,21 @@
           </div>
         </article>
 
-        <!-- 7 · Enterprise Workflow Automation -->
-        <article class="card" data-rv="up">
+        <!-- 7 · Clinical NLP (hidden until "show more") -->
+        <article class="card work-hidden" data-rv="up">
+          <div class="card__top">
+            <span class="badge badge--research">Research</span>
+            <div class="card__metric">49,810</div>
+          </div>
+          <h3>Clinical NLP for Diagnosis Classification</h3>
+          <p class="card__desc">NLP research benchmarking ClinicalBERT against TF-IDF across 49,810 patient records for diagnosis classification, examining where transformer models earn their cost in clinical text and where classical methods still hold.</p>
+          <div class="card__tags">
+            <span class="card__tag">ClinicalBERT</span><span class="card__tag">TF-IDF</span><span class="card__tag">NLP</span><span class="card__tag">PyTorch</span>
+          </div>
+        </article>
+
+        <!-- 8 · Enterprise Workflow Automation (hidden) -->
+        <article class="card work-hidden" data-rv="up">
           <div class="card__top">
             <span class="badge badge--confidential">Confidential</span>
           </div>
@@ -365,8 +319,8 @@
           </div>
         </article>
 
-        <!-- 8 · Enterprise Learning Platform (stealth) -->
-        <article class="card" data-rv="up">
+        <!-- 9 · Enterprise Learning Platform (hidden, stealth) -->
+        <article class="card work-hidden" data-rv="up">
           <div class="card__top">
             <span class="badge badge--stealth">Stealth</span>
           </div>
@@ -378,6 +332,7 @@
         </article>
 
       </div>
+      <button class="show-more" id="work-more" type="button">Show 3 more projects <span aria-hidden="true">+</span></button>
     </div>
   </section>
 
@@ -512,59 +467,50 @@
           <a class="paper__doi" href="https://doi.org/10.1016/j.fraope.2026.100579" target="_blank" rel="noopener">DOI: 10.1016/j.fraope.2026.100579 · Open Access ↗</a>
         </article>
 
-        <article class="paper" data-rv="up">
-          <div class="paper__top">
-            <span class="paper__venue">Computers &amp; Security · Elsevier</span>
+        <ul class="paper-list">
+          <li class="paper-row" data-rv="up">
+            <div class="paper-row__main">
+              <h4>Quantum Kernel Enhanced Cross-Domain Probability Fusion (QCDEPF)</h4>
+              <span class="paper-row__venue">Computers &amp; Security · Elsevier · quantum kernels on NVIDIA H100</span>
+            </div>
             <span class="badge badge--review">Under Review</span>
-          </div>
-          <h3>Quantum Kernel Enhanced Cross-Domain Probability Fusion (QCDEPF)</h3>
-          <p>Systematic investigation of quantum kernel methods for cross-dataset phishing detection, simulated across 8 qubit configurations on NVIDIA H100.</p>
-        </article>
-
-        <article class="paper" data-rv="up">
-          <div class="paper__top">
-            <span class="paper__venue">Nexus · Elsevier</span>
+          </li>
+          <li class="paper-row" data-rv="up">
+            <div class="paper-row__main">
+              <h4>QCDEPF-Nexus: Hilbert Space Dimensionality &amp; Kernel Sparsity</h4>
+              <span class="paper-row__venue">Nexus · Elsevier · qubit scaling &amp; kernel sparsity</span>
+            </div>
             <span class="badge badge--review">Under Review</span>
-          </div>
-          <h3>QCDEPF-Nexus: Hilbert Space Dimensionality &amp; Kernel Sparsity</h3>
-          <p>Deeper analysis of qubit scaling, kernel sparsity phenomena, and the practical design guideline 2<sup>q</sup> ≪ n for quantum kernel transfer learning.</p>
-        </article>
-
-        <article class="paper" data-rv="up">
-          <div class="paper__top">
-            <span class="paper__venue">JOHA · Belitung Raya</span>
+          </li>
+          <li class="paper-row" data-rv="up">
+            <div class="paper-row__main">
+              <h4>Fertility Period Knowledge Among Adolescent Girls in West Africa</h4>
+              <span class="paper-row__venue">JOHA · Belitung Raya · multi-country ML, 16,852 girls</span>
+            </div>
             <span class="badge badge--review">Revisions</span>
-          </div>
-          <h3>Fertility Period Knowledge Among Adolescent Girls in West Africa</h3>
-          <p>Multi-country ML study across Benin, Gambia, Ghana, and Nigeria, 16,852 adolescent girls. LightGBM, SMOTE, Boruta, and LIME on the most recent DHS data.</p>
-        </article>
-
-        <article class="paper" data-rv="up">
-          <div class="paper__top">
-            <span class="paper__venue">Springer · Transfer Desk</span>
+          </li>
+          <li class="paper-row" data-rv="up">
+            <div class="paper-row__main">
+              <h4>Explainable ML for Maternal Health Service Utilisation in Nigeria</h4>
+              <span class="paper-row__venue">Springer · survey-weighted LightGBM + SHAP, 2024 NDHS</span>
+            </div>
             <span class="badge badge--review">Resubmission</span>
-          </div>
-          <h3>Explainable ML for Maternal Health Service Utilisation in Nigeria</h3>
-          <p>Survey-weighted LightGBM on 5,998 facility-delivered women from the 2024 NDHS, with SHAP explainability and calibration analysis.</p>
-        </article>
-
-        <article class="paper" data-rv="up">
-          <div class="paper__top">
-            <span class="paper__venue">Target: JAMIA / npj Digital Medicine</span>
+          </li>
+          <li class="paper-row" data-rv="up">
+            <div class="paper-row__main">
+              <h4>Clinical NLP for Diagnosis Classification</h4>
+              <span class="paper-row__venue">Target: JAMIA / npj Digital Medicine · ClinicalBERT vs TF-IDF, 49,810 records</span>
+            </div>
             <span class="badge badge--research">In Prep</span>
-          </div>
-          <h3>Clinical NLP for Diagnosis Classification</h3>
-          <p>ClinicalBERT vs TF-IDF benchmarking across 49,810 patient records, examining where transformer models earn their cost in clinical text.</p>
-        </article>
-
-        <article class="paper" data-rv="up">
-          <div class="paper__top">
-            <span class="paper__venue">In Preparation · Advanced Draft</span>
+          </li>
+          <li class="paper-row" data-rv="up">
+            <div class="paper-row__main">
+              <h4>Copula Geoadditive &amp; GLMM Series: Anemia &amp; Malaria, Sub-Saharan Africa</h4>
+              <span class="paper-row__venue">In preparation · copula regression + GLMM across 4 countries</span>
+            </div>
             <span class="badge badge--research">In Prep</span>
-          </div>
-          <h3>Copula Geoadditive &amp; GLMM Series: Anemia &amp; Malaria, Sub-Saharan Africa</h3>
-          <p>Bivariate copula regression with district-specific parameters and Markov random fields; GLMM modelling across Ghana, Gambia, Rwanda, and Uganda DHS/MIS data.</p>
-        </article>
+          </li>
+        </ul>
 
       </div>
 

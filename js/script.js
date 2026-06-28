@@ -279,6 +279,22 @@
     if (heroVideo.readyState >= 2) { safePlay(); fadeTo(1); }
   }
 
+  /* ───────── Show more / fewer projects ───────── */
+  var workMore = document.getElementById("work-more");
+  if (workMore) {
+    var workGrid = document.querySelector(".work__grid");
+    workMore.addEventListener("click", function () {
+      var expanded = workGrid.classList.toggle("is-expanded");
+      workMore.classList.toggle("is-open", expanded);
+      if (expanded) {
+        // these cards were display:none, so the scroll reveal never fired — reveal them now
+        workGrid.querySelectorAll(".work-hidden").forEach(function (c) { c.classList.add("rv-in"); });
+      }
+      workMore.firstChild.textContent = expanded ? "Show fewer projects " : "Show 3 more projects ";
+      if (hasST) window.ScrollTrigger.refresh();
+    });
+  }
+
   /* ───────── Contact form → mailto bridge ───────── */
   var form = document.getElementById("contact-form");
   if (form) {
