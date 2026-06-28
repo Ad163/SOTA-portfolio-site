@@ -593,7 +593,8 @@ body.menu-open .mobile-menu a:nth-child(6) { animation-delay: 0.38s; }
 /* ───────────────────────── Selected Work ───────────────────────── */
 .work__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-columns: minmax(0, 1fr);
   gap: 1.4rem;
 }
 .card {
@@ -695,7 +696,7 @@ body.menu-open .mobile-menu a:nth-child(6) { animation-delay: 0.38s; }
 .exp__bullets li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 6px; height: 1px; background: var(--accent); }
 
 /* ───────────────────────── Research ───────────────────────── */
-.research__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+.research__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-columns: minmax(0, 1fr); gap: 1.2rem; }
 .paper {
   display: flex; flex-direction: column; gap: 0.9rem;
   padding: clamp(1.4rem, 2.4vw, 2rem);
@@ -831,10 +832,12 @@ body.menu-open .mobile-menu a:nth-child(6) { animation-delay: 0.38s; }
   .section-head h2 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
 
   .work__grid, .research__grid { grid-template-columns: 1fr; }
-  .card--wide, .paper--feature { grid-column: span 1; }
+  /* must match the .card.card--wide (0,2,0) specificity to actually win */
+  .card.card--wide, .paper.paper--feature { grid-column: span 1; }
   .card { min-height: 0; }
   .exp { grid-template-columns: 1fr; gap: 0.8rem; }
   .about__values { grid-template-columns: 1fr; }
+  .awards__grid, .quotes__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
