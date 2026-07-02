@@ -290,7 +290,7 @@
         // these cards were display:none, so the scroll reveal never fired — reveal them now
         workGrid.querySelectorAll(".work-hidden").forEach(function (c) { c.classList.add("rv-in"); });
       }
-      workMore.firstChild.textContent = expanded ? "Show fewer projects " : "Show 3 more projects ";
+      workMore.firstChild.textContent = expanded ? "Show fewer projects " : "Show 2 more projects ";
       if (hasST) window.ScrollTrigger.refresh();
     });
   }
