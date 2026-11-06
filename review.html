@@ -63,8 +63,8 @@
       <p class="lede">Thank you for taking a moment. A few honest sentences about the problem we tackled, what I did, and what changed help future clients far more than praise alone. Nothing goes on the site without your choice below.</p>
     </section>
 
-    <!-- FORM_ENDPOINT: replace YOUR_FORM_ID with your Formspree form ID (formspree.io → New form). -->
-    <form id="review-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <!-- FORM_ENDPOINT: replace YOUR_ENDPOINT with the Google Apps Script web-app URL (ends in /exec). -->
+    <form id="review-form" action="https://script.google.com/macros/s/AKfycbysG1bydAkvkrKSyu4bPdpxj76Lw9Q93H4UotVzsaT2YBlwmikexPWfyaxFbllypcaLlA/exec" method="POST">
       <input type="hidden" name="_subject" value="New testimonial for saviourhenry.com">
       <div class="hp" aria-hidden="true"><label for="_gotcha">Leave this empty</label><input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 
@@ -135,7 +135,7 @@
       review.addEventListener('input', function () { counter.textContent = review.value.length + ' / 1200'; });
 
       form.addEventListener('submit', function (e) {
-        if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+        if (form.getAttribute('action').indexOf('YOUR_ENDPOINT') !== -1) {
           e.preventDefault();
           status.className = 'status error';
           status.textContent = 'This form is not connected yet. Please email johnsavilesh@gmail.com instead.';
@@ -146,9 +146,13 @@
         submit.disabled = true;
         status.className = 'status';
         status.textContent = 'Sending…';
-        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        fetch(form.action, { method: 'POST', body: new URLSearchParams(new FormData(form)) })
           .then(function (res) {
             if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+          })
+          .then(function (data) {
+            if (!data || data.ok !== true) throw new Error('Rejected');
             form.style.display = 'none';
             document.getElementById('intro').style.display = 'none';
             var thanks = document.getElementById('thanks');
