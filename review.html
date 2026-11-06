@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share a Review - Saviour Henry</title>
+  <meta name="description" content="Share a few words about working with Saviour Henry.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#101311;--paper:#f4f1e9;--muted:#5f645b;--lime:#d6f35b;--line:rgba(16,19,17,.16);--field:#fbfaf5;--error:#a3321f;
+      --serif:'Playfair Display',Georgia,serif;--sans:'Manrope',Arial,sans-serif;--mono:'DM Mono',monospace;color-scheme:light}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+    header{height:72px;display:flex;align-items:center;justify-content:space-between;width:min(1080px,calc(100% - 32px));margin:auto}
+    .wordmark{font-size:1.35rem;font-weight:800;letter-spacing:-.08em;text-decoration:none;color:var(--ink)}
+    .wordmark span{color:#a0bd25}
+    .back{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}
+    main{width:min(720px,calc(100% - 32px));margin:3rem auto 5rem}
+    .kicker{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.13em;margin:0 0 1.2rem;color:var(--muted)}
+    h1{font-size:clamp(2.4rem,7vw,4.2rem);line-height:.98;letter-spacing:-.07em;margin:0 0 1.4rem;font-weight:700}
+    em{font-family:var(--serif);font-weight:600;letter-spacing:-.05em}
+    .lede{color:#4f554c;font-size:1.04rem;max-width:580px;margin:0 0 2.6rem}
+    form{display:grid;gap:1.6rem}
+    fieldset{border:0;padding:0;margin:0;display:grid;gap:1.6rem}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    label,legend{display:block;font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.55rem}
+    .hint{font:400 .88rem var(--sans);text-transform:none;letter-spacing:0;color:var(--muted);margin:-.2rem 0 .6rem}
+    input[type=text],input[type=email],input[type=url],select,textarea{width:100%;font:500 1rem var(--sans);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:2px;padding:.85rem .95rem}
+    textarea{min-height:170px;resize:vertical}
+    input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-offset:1px;border-color:var(--ink)}
+    .choices{display:grid;gap:.6rem}
+    .choice{display:flex;gap:.7rem;align-items:flex-start;font:500 .97rem var(--sans);text-transform:none;letter-spacing:0;margin:0;cursor:pointer}
+    .choice input{margin-top:.3rem;accent-color:var(--ink);width:1rem;height:1rem;flex:none}
+    .counter{font:400 .72rem var(--mono);color:var(--muted);text-align:right;margin-top:.35rem}
+    .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    button{justify-self:start;display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.4rem;border:0;border-radius:2px;background:var(--ink);color:var(--paper);font:500 .76rem var(--mono);text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
+    button:hover{background:#2a2f2b}
+    button:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+    button[disabled]{opacity:.55;cursor:wait}
+    .status{font-size:.95rem;margin:0}
+    .status.error{color:var(--error)}
+    .privacy{font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1.4rem;margin-top:.6rem}
+    .thanks{display:none}
+    .thanks.show{display:block}
+    .thanks h2{font-size:clamp(2rem,6vw,3.2rem);letter-spacing:-.06em;line-height:1;margin:0 0 1rem}
+    @media(max-width:600px){.row{grid-template-columns:1fr}main{margin-top:1.6rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="wordmark" href="index.html">SH<span>.</span></a>
+    <a class="back" href="index.html">Back to site</a>
+  </header>
+
+  <main>
+    <section id="intro">
+      <p class="kicker">Your review · about 3 minutes</p>
+      <h1>How was it <em>working together?</em></h1>
+      <p class="lede">Thank you for taking a moment. A few honest sentences about the problem we tackled, what I did, and what changed help future clients far more than praise alone. Nothing goes on the site without your choice below.</p>
+    </section>
+
+    <!-- FORM_ENDPOINT: replace YOUR_FORM_ID with your Formspree form ID (formspree.io → New form). -->
+    <form id="review-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="New testimonial for saviourhenry.com">
+      <div class="hp" aria-hidden="true"><label for="_gotcha">Leave this empty</label><input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+
+      <fieldset>
+        <div class="row">
+          <div><label for="name">Your name *</label><input type="text" id="name" name="name" required autocomplete="name"></div>
+          <div><label for="email">Email *</label><input type="email" id="email" name="email" required autocomplete="email"><p class="hint">Only used to confirm the review. Never shown.</p></div>
+        </div>
+        <div class="row">
+          <div><label for="role">Role / title</label><input type="text" id="role" name="role" autocomplete="organization-title" placeholder="e.g. CTO"></div>
+          <div><label for="company">Company or organisation</label><input type="text" id="company" name="company" autocomplete="organization"></div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="relationship">How did we work together? *</label>
+            <select id="relationship" name="relationship" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>I hired Saviour (client)</option>
+              <option>I managed Saviour</option>
+              <option>We worked on the same team</option>
+              <option>Saviour mentored me</option>
+              <option>Research collaborator</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div><label for="project">Project or period</label><input type="text" id="project" name="project" placeholder="e.g. RAG platform, 2025"></div>
+        </div>
+        <div>
+          <label for="review">Your review *</label>
+          <p class="hint">What was the challenge, what did I do, and how did it turn out? Specifics help most, including anything I could have done better.</p>
+          <textarea id="review" name="review" required minlength="40" maxlength="1200"></textarea>
+          <div class="counter" id="counter" aria-live="polite">0 / 1200</div>
+        </div>
+        <div><label for="linkedin">LinkedIn profile (optional)</label><input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/…"><p class="hint">Lets readers see you're a real person. Shown only if you allow it below.</p></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>May I publish this? *</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="permission" value="Publish with full name, role and company" required> Yes, with my full name, role and company</label>
+          <label class="choice"><input type="radio" name="permission" value="Publish with first name and role only"> Yes, with my first name and role only</label>
+          <label class="choice"><input type="radio" name="permission" value="Private feedback only, do not publish"> No, this is private feedback for Saviour</label>
+        </div>
+        <label class="choice"><input type="checkbox" name="photo_ok" value="Yes"> You may use my LinkedIn profile photo next to the review</label>
+      </fieldset>
+
+      <button type="submit" id="submit">Send review <span>↗</span></button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <p class="privacy">Your email is never published. I may lightly edit for length or typos, and I'll check with you before publishing anything changed. Ask any time to have your review removed.</p>
+    </form>
+
+    <section class="thanks" id="thanks" tabindex="-1">
+      <p class="kicker">Received</p>
+      <h2>Thank you. <em>Truly.</em></h2>
+      <p class="lede">Your review is on its way to me. If you said it can be published, I'll let you know when it's live.</p>
+      <a class="back" href="index.html">Visit the site</a>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var form = document.getElementById('review-form');
+      var review = document.getElementById('review');
+      var counter = document.getElementById('counter');
+      var status = document.getElementById('status');
+      var submit = document.getElementById('submit');
+
+      review.addEventListener('input', function () { counter.textContent = review.value.length + ' / 1200'; });
+
+      form.addEventListener('submit', function (e) {
+        if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+          e.preventDefault();
+          status.className = 'status error';
+          status.textContent = 'This form is not connected yet. Please email johnsavilesh@gmail.com instead.';
+          return;
+        }
+        if (!window.fetch) return; // fall back to a normal POST
+        e.preventDefault();
+        submit.disabled = true;
+        status.className = 'status';
+        status.textContent = 'Sending…';
+        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            form.style.display = 'none';
+            document.getElementById('intro').style.display = 'none';
+            var thanks = document.getElementById('thanks');
+            thanks.classList.add('show');
+            thanks.focus();
+          })
+          .catch(function () {
+            submit.disabled = false;
+            status.className = 'status error';
+            status.textContent = 'Something went wrong sending that. Please try again, or email johnsavilesh@gmail.com.';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
